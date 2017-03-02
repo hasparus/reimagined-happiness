@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html  xmlns:fb="https://www.facebook.com/2008/fbml"  xmlns:og="http://ogp.me/ns#" lang="en-US">
+
+<!-- Mirrored from www.creativeapplications.net/processing/random-access-memory-materialising-mathematical-process-algorithm/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Mar 2017 16:47:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Random Access Memory – Materialising mathematical process (algorithm) / @rlfbckr</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://www.creativeapplications.net/xmlrpc.php">
+
+	<link rel="apple-touch-icon" sizes="57x57" href="../../apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../../apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../../apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../../apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../../apple-touch-icon-60x60.html">
+	<link rel="apple-touch-icon" sizes="120x120" href="../../apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../../apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../../apple-touch-icon-152x152.png">
+
+  <script type="text/javascript" src="../../../code.jquery.com/jquery-latest.js"></script>
+
+
+	<!--[if lt IE 9]>
+		<script src="http://www.creativeapplications.net/wp-content/themes/CAN3/js/html5.js"></script>
+	<![endif]-->
+
+<!-- All in One SEO Pack 2.3.11.4 by Michael Torbert of Semper Fi Web Design[216,319] -->
+<meta name="description"  content="Created by Berlin based Ralf Baecker, Random Access Memory is a fully functional digital memory. Instead of operating on semi-conducting components to represent" />
+
+<meta name="keywords"  content="software,memory,machine,ralf baecker,performance,computation,memory storage,processing,opencv,process" />
+
+<link rel="canonical" href="index.html" />
+<!-- /all in one seo pack -->
+<link rel='dns-prefetch' href='http://s0.wp.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="CreativeApplications.Net &raquo; Feed" href="http://www.creativeapplications.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CreativeApplications.Net &raquo; Comments Feed" href="http://www.creativeapplications.net/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CreativeApplications.Net &raquo; Random Access Memory – Materialising mathematical process (algorithm) Comments Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/www.creativeapplications.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=277816072bc6151191a7895feef57117"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='batch_css-css'  href='../../wp-content/plugins/batchmove/css/batchc027.css?ver=277816072bc6151191a7895feef57117' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='../../wp-content/plugins/contact-form-7/includes/css/styles1c9b.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css'  href='../../wp-content/plugins/popup-maker/assets/css/site.min13ac.css?ver=1.4.21' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-lightbox-imagelightbox-css'  href='../../wp-content/plugins/responsive-lightbox/assets/imagelightbox/css/imagelightboxd203.css?ver=1.6.12' type='text/css' media='all' />
+<link rel='stylesheet' id='swpm.common-css'  href='../../wp-content/plugins/simple-membership/css/swpm.commonc027.css?ver=277816072bc6151191a7895feef57117' type='text/css' media='all' />
+<link rel='stylesheet' id='validationEngine.jquery-css'  href='../../wp-content/plugins/simple-membership/css/validationEngine.jqueryc027.css?ver=277816072bc6151191a7895feef57117' type='text/css' media='all' />
+<link rel='stylesheet' id='thumbs_rating_styles-css'  href='../../wp-content/plugins/thumbs-rating/css/style8a54.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='usp_style-css'  href='../../wp-content/plugins/user-submitted-posts/resources/usp.css' type='text/css' media='all' />
+<link rel='stylesheet' id='zuki-flex-slider-style-css'  href='../../wp-content/themes/CAN3/js/flex-slider/flexsliderc027.css?ver=277816072bc6151191a7895feef57117' type='text/css' media='all' />
+<link rel='stylesheet' id='zuki-fonts-css'  href='http://fonts.googleapis.com/css?family=Libre+Baskerville%3A400%2C700%2C400italic%2C700italic%7CKarla%3A400%2C400italic%2C700%2C700italic&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='../../wp-content/plugins/jetpack/_inc/genericons/genericons/genericons128b.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='zuki-style-css'  href='../../wp-content/themes/CAN3/stylefc50.css?ver=20140630' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='../../wp-content/plugins/jetpack/css/jetpack167b.css?ver=4.6' type='text/css' media='all' />
+<script type='text/javascript' src='../../wp-content/plugins/batchmove/js/batchc027.js?ver=277816072bc6151191a7895feef57117'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
+<script type='text/javascript' src='../../wp-content/plugins/responsive-lightbox/assets/imagelightbox/js/imagelightbox.mind203.js?ver=1.6.12'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rlArgs = {"script":"imagelightbox","selector":"lightbox","customEvents":"","activeGalleries":"1","animationSpeed":"100","preloadNext":"1","enableKeyboard":"1","quitOnEnd":"0","quitOnImageClick":"0","quitOnDocumentClick":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/responsive-lightbox/js/frontd203.js?ver=1.6.12'></script>
+<script type='text/javascript' src='../../wp-content/plugins/simple-membership/js/jquery.validationEngine-enc027.js?ver=277816072bc6151191a7895feef57117'></script>
+<script type='text/javascript' src='../../wp-content/plugins/simple-membership/js/jquery.validationEnginec027.js?ver=277816072bc6151191a7895feef57117'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thumbs_rating_ajax = {"ajax_url":"http:\/\/www.creativeapplications.net\/wp-admin\/admin-ajax.php","nonce":"db99fc3e31"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/thumbs-rating/js/generalf39e.js?ver=4.0.1'></script>
+<script type='text/javascript' src='../../wp-content/plugins/user-submitted-posts/resources/jquery.cookie.js'></script>
+<script type='text/javascript' src='../../wp-content/plugins/user-submitted-posts/resources/jquery.parsley.min.js'></script>
+<script type='text/javascript'>
+window.ParsleyConfig = { excluded: ".exclude" }; var usp_case_sensitivity = "false"; var usp_challenge_response = "7";
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/user-submitted-posts/resources/jquery.usp.core.js'></script>
+<script type='text/javascript' src='../../wp-content/themes/CAN3/js/jquery.fitvids4963.js?ver=1.1'></script>
+<script type='text/javascript' src='../../wp-content/themes/CAN3/js/flex-slider/jquery.flexslider-minc027.js?ver=277816072bc6151191a7895feef57117'></script>
+<script type='text/javascript' src='../../wp-content/themes/CAN3/js/functions9c16.js?ver=20140426'></script>
+<link rel='https://api.w.org/' href='http://www.creativeapplications.net/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.creativeapplications.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.creativeapplications.net/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Vector Festival 2017 &#8211; Call for Submissions' href='http://www.creativeapplications.net/news/vector-festival-2017-call-for-submissions/' />
+<link rel='next' title='CAN Favorites 2016 – Vote Now!' href='http://www.creativeapplications.net/news/can-favorites-2016-vote-now/' />
+
+<link rel='shortlink' href='http://www.creativeapplications.net/?p=60160' />
+<link rel="alternate" type="application/json+oembed" href="http://www.creativeapplications.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.creativeapplications.net%2Fprocessing%2Frandom-access-memory-materialising-mathematical-process-algorithm%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.creativeapplications.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.creativeapplications.net%2Fprocessing%2Frandom-access-memory-materialising-mathematical-process-algorithm%2F&amp;format=xml" />
+      <!-- Open Graph Meta Tags for Facebook and LinkedIn Sharing !-->
+		<meta property="og:title" content="Random Access Memory – Materialising mathematical process (algorithm)"/>
+		<meta property="og:description" content="Created by Berlin based Ralf Baecker, Random Access Memory is a fully functional digital memory. Instead of operating on semi-conducting components to represent either the binary states of 0 (zero) or 1 (one), the memory uses grains of sand as storage material." />
+		<meta property="og:url" content="http://www.creativeapplications.net/processing/random-access-memory-materialising-mathematical-process-algorithm/"/>
+							<meta property="og:image" content="http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_02-1.jpg" />
+					<meta property="og:type" content="article"
+		/>
+		<meta property="og:site_name" content="CreativeApplications.Net"/>
+		<!-- End Open Graph Meta Tags !-->
+
+        <style id="pum-styles" type="text/css">
+    /* Popup Theme 55256: CAN Popup Theme */
+.pum-theme-55256, .pum-theme-can-popup-theme { background-color: rgba( 247, 247, 247, 0 ) } 
+.pum-theme-55256 .pum-container, .pum-theme-can-popup-theme .pum-container { padding: 0px; border-radius: 0px; border: 1px none #000000; box-shadow: 0px 0px 60px -28px rgba( 2, 2, 2, 1 ); background-color: rgba( 244, 244, 244, 0 ) } 
+.pum-theme-55256 .pum-title, .pum-theme-can-popup-theme .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 1 ); font-family: inherit; font-size: 36px; line-height: 36px } 
+.pum-theme-55256 .pum-content, .pum-theme-can-popup-theme .pum-content { color: #8c8c8c; font-family: inherit } 
+.pum-theme-55256 .pum-content + .pum-close, .pum-theme-can-popup-theme .pum-content + .pum-close { height: auto; width: auto; left: auto; right: 0px; bottom: auto; top: 0px; padding: 8px; color: #ffffff; font-family: inherit; font-size: 12px; line-height: 14px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 61, 61, 61, 1 ) } 
+/* Popup Theme 55242: Framed Border */
+.pum-theme-55242, .pum-theme-framed-border-2 { background-color: rgba( 255, 255, 255, 0.5 ) } 
+.pum-theme-55242 .pum-container, .pum-theme-framed-border-2 .pum-container { padding: 18px; border-radius: 0px; border: 20px outset #dd3333; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.97 ) inset; background-color: rgba( 255, 251, 239, 1 ) } 
+.pum-theme-55242 .pum-title, .pum-theme-framed-border-2 .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-size: 32px; line-height: 36px } 
+.pum-theme-55242 .pum-content, .pum-theme-framed-border-2 .pum-content { color: #2d2d2d; font-family: inherit } 
+.pum-theme-55242 .pum-content + .pum-close, .pum-theme-framed-border-2 .pum-content + .pum-close { height: 20px; width: 20px; left: auto; right: -20px; bottom: auto; top: -20px; padding: 0px; color: #ffffff; font-family: Acme; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 0.55 ) } 
+/* Popup Theme 55241: Framed Border */
+.pum-theme-55241, .pum-theme-framed-border { background-color: rgba( 255, 255, 255, 0.5 ) } 
+.pum-theme-55241 .pum-container, .pum-theme-framed-border .pum-container { padding: 18px; border-radius: 0px; border: 20px outset #dd3333; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.97 ) inset; background-color: rgba( 255, 251, 239, 1 ) } 
+.pum-theme-55241 .pum-title, .pum-theme-framed-border .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-size: 32px; line-height: 36px } 
+.pum-theme-55241 .pum-content, .pum-theme-framed-border .pum-content { color: #2d2d2d; font-family: inherit } 
+.pum-theme-55241 .pum-content + .pum-close, .pum-theme-framed-border .pum-content + .pum-close { height: 20px; width: 20px; left: auto; right: -20px; bottom: auto; top: -20px; padding: 0px; color: #ffffff; font-family: Acme; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 0.55 ) } 
+/* Popup Theme 55240: Cutting Edge */
+.pum-theme-55240, .pum-theme-cutting-edge-2 { background-color: rgba( 0, 0, 0, 0.5 ) } 
+.pum-theme-55240 .pum-container, .pum-theme-cutting-edge-2 .pum-container { padding: 18px; border-radius: 0px; border: 1px none #000000; box-shadow: 0px 10px 25px 0px rgba( 2, 2, 2, 0.5 ); background-color: rgba( 30, 115, 190, 1 ) } 
+.pum-theme-55240 .pum-title, .pum-theme-cutting-edge-2 .pum-title { color: #ffffff; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Sans-Serif; font-size: 26px; line-height: 28px } 
+.pum-theme-55240 .pum-content, .pum-theme-cutting-edge-2 .pum-content { color: #ffffff; font-family: inherit } 
+.pum-theme-55240 .pum-content + .pum-close, .pum-theme-cutting-edge-2 .pum-content + .pum-close { height: 24px; width: 24px; left: auto; right: 0px; bottom: auto; top: 0px; padding: 0px; color: #1e73be; font-family: inherit; font-size: 32px; line-height: 24px; border: 1px none #ffffff; border-radius: 0px; box-shadow: -1px 1px 1px 0px rgba( 2, 2, 2, 0.1 ); text-shadow: -1px 1px 1px rgba( 0, 0, 0, 0.1 ); background-color: rgba( 238, 238, 34, 1 ) } 
+/* Popup Theme 55239: Cutting Edge */
+.pum-theme-55239, .pum-theme-cutting-edge { background-color: rgba( 0, 0, 0, 0.5 ) } 
+.pum-theme-55239 .pum-container, .pum-theme-cutting-edge .pum-container { padding: 18px; border-radius: 0px; border: 1px none #000000; box-shadow: 0px 10px 25px 0px rgba( 2, 2, 2, 0.5 ); background-color: rgba( 30, 115, 190, 1 ) } 
+.pum-theme-55239 .pum-title, .pum-theme-cutting-edge .pum-title { color: #ffffff; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Sans-Serif; font-size: 26px; line-height: 28px } 
+.pum-theme-55239 .pum-content, .pum-theme-cutting-edge .pum-content { color: #ffffff; font-family: inherit } 
+.pum-theme-55239 .pum-content + .pum-close, .pum-theme-cutting-edge .pum-content + .pum-close { height: 24px; width: 24px; left: auto; right: 0px; bottom: auto; top: 0px; padding: 0px; color: #1e73be; font-family: inherit; font-size: 32px; line-height: 24px; border: 1px none #ffffff; border-radius: 0px; box-shadow: -1px 1px 1px 0px rgba( 2, 2, 2, 0.1 ); text-shadow: -1px 1px 1px rgba( 0, 0, 0, 0.1 ); background-color: rgba( 238, 238, 34, 1 ) } 
+/* Popup Theme 55238: Hello Box */
+.pum-theme-55238, .pum-theme-hello-box-2 { background-color: rgba( 0, 0, 0, 0.75 ) } 
+.pum-theme-55238 .pum-container, .pum-theme-hello-box-2 .pum-container { padding: 30px; border-radius: 80px; border: 14px solid #81d742; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0 ); background-color: rgba( 255, 255, 255, 1 ) } 
+.pum-theme-55238 .pum-title, .pum-theme-hello-box-2 .pum-title { color: #2d2d2d; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Montserrat; font-size: 32px; line-height: 36px } 
+.pum-theme-55238 .pum-content, .pum-theme-hello-box-2 .pum-content { color: #2d2d2d; font-family: inherit } 
+.pum-theme-55238 .pum-content + .pum-close, .pum-theme-hello-box-2 .pum-content + .pum-close { height: auto; width: auto; left: auto; right: -30px; bottom: auto; top: -30px; padding: 0px; color: #2d2d2d; font-family: inherit; font-size: 32px; line-height: 28px; border: 1px none #ffffff; border-radius: 28px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 255, 255, 255, 1 ) } 
+/* Popup Theme 55237: Hello Box */
+.pum-theme-55237, .pum-theme-hello-box { background-color: rgba( 0, 0, 0, 0.75 ) } 
+.pum-theme-55237 .pum-container, .pum-theme-hello-box .pum-container { padding: 30px; border-radius: 80px; border: 14px solid #81d742; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0 ); background-color: rgba( 255, 255, 255, 1 ) } 
+.pum-theme-55237 .pum-title, .pum-theme-hello-box .pum-title { color: #2d2d2d; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Montserrat; font-size: 32px; line-height: 36px } 
+.pum-theme-55237 .pum-content, .pum-theme-hello-box .pum-content { color: #2d2d2d; font-family: inherit } 
+.pum-theme-55237 .pum-content + .pum-close, .pum-theme-hello-box .pum-content + .pum-close { height: auto; width: auto; left: auto; right: -30px; bottom: auto; top: -30px; padding: 0px; color: #2d2d2d; font-family: inherit; font-size: 32px; line-height: 28px; border: 1px none #ffffff; border-radius: 28px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 255, 255, 255, 1 ) } 
+/* Popup Theme 55236: Enterprise Blue */
+.pum-theme-55236, .pum-theme-enterprise-blue-2 { background-color: rgba( 0, 0, 0, 0.7 ) } 
+.pum-theme-55236 .pum-container, .pum-theme-enterprise-blue-2 .pum-container { padding: 28px; border-radius: 5px; border: 1px none #000000; box-shadow: 0px 10px 25px 4px rgba( 2, 2, 2, 0.5 ); background-color: rgba( 255, 255, 255, 1 ) } 
+.pum-theme-55236 .pum-title, .pum-theme-enterprise-blue-2 .pum-title { color: #315b7c; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-size: 34px; line-height: 36px } 
+.pum-theme-55236 .pum-content, .pum-theme-enterprise-blue-2 .pum-content { color: #2d2d2d; font-family: inherit } 
+.pum-theme-55236 .pum-content + .pum-close, .pum-theme-enterprise-blue-2 .pum-content + .pum-close { height: 28px; width: 28px; left: auto; right: 8px; bottom: auto; top: 8px; padding: 4px; color: #ffffff; font-family: inherit; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 42px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 49, 91, 124, 1 ) } 
+/* Popup Theme 55235: Enterprise Blue */
+.pum-theme-55235, .pum-theme-enterprise-blue { background-color: rgba( 0, 0, 0, 0.7 ) } 
+.pum-theme-55235 .pum-container, .pum-theme-enterprise-blue .pum-container { padding: 28px; border-radius: 5px; border: 1px none #000000; box-shadow: 0px 10px 25px 4px rgba( 2, 2, 2, 0.5 ); background-color: rgba( 255, 255, 255, 1 ) } 
+.pum-theme-55235 .pum-title, .pum-theme-enterprise-blue .pum-title { color: #315b7c; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-size: 34px; line-height: 36px } 
+.pum-theme-55235 .pum-content, .pum-theme-enterprise-blue .pum-content { color: #2d2d2d; font-family: inherit } 
+.pum-theme-55235 .pum-content + .pum-close, .pum-theme-enterprise-blue .pum-content + .pum-close { height: 28px; width: 28px; left: auto; right: 8px; bottom: auto; top: 8px; padding: 4px; color: #ffffff; font-family: inherit; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 42px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 49, 91, 124, 1 ) } 
+/* Popup Theme 55234: Light Box */
+.pum-theme-55234, .pum-theme-lightbox-2 { background-color: rgba( 0, 0, 0, 0.6 ) } 
+.pum-theme-55234 .pum-container, .pum-theme-lightbox-2 .pum-container { padding: 18px; border-radius: 3px; border: 8px solid #000000; box-shadow: 0px 0px 30px 0px rgba( 2, 2, 2, 1 ); background-color: rgba( 255, 255, 255, 1 ) } 
+.pum-theme-55234 .pum-title, .pum-theme-lightbox-2 .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-size: 32px; line-height: 36px } 
+.pum-theme-55234 .pum-content, .pum-theme-lightbox-2 .pum-content { color: #000000; font-family: inherit } 
+.pum-theme-55234 .pum-content + .pum-close, .pum-theme-lightbox-2 .pum-content + .pum-close { height: 30px; width: 30px; left: auto; right: -24px; bottom: auto; top: -24px; padding: 0px; color: #ffffff; font-family: inherit; font-size: 24px; line-height: 26px; border: 2px solid #ffffff; border-radius: 30px; box-shadow: 0px 0px 15px 1px rgba( 2, 2, 2, 0.75 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 1 ) } 
+/* Popup Theme 55233: Light Box */
+.pum-theme-55233, .pum-theme-lightbox { background-color: rgba( 0, 0, 0, 0.6 ) } 
+.pum-theme-55233 .pum-container, .pum-theme-lightbox .pum-container { padding: 18px; border-radius: 3px; border: 8px solid #000000; box-shadow: 0px 0px 30px 0px rgba( 2, 2, 2, 1 ); background-color: rgba( 255, 255, 255, 1 ) } 
+.pum-theme-55233 .pum-title, .pum-theme-lightbox .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-size: 32px; line-height: 36px } 
+.pum-theme-55233 .pum-content, .pum-theme-lightbox .pum-content { color: #000000; font-family: inherit } 
+.pum-theme-55233 .pum-content + .pum-close, .pum-theme-lightbox .pum-content + .pum-close { height: 30px; width: 30px; left: auto; right: -24px; bottom: auto; top: -24px; padding: 0px; color: #ffffff; font-family: inherit; font-size: 24px; line-height: 26px; border: 2px solid #ffffff; border-radius: 30px; box-shadow: 0px 0px 15px 1px rgba( 2, 2, 2, 0.75 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 1 ) } 
+/* Popup Theme 55232: Default Theme */
+.pum-theme-55232, .pum-theme-default-theme-2 { background-color: rgba( 255, 255, 255, 1 ) } 
+.pum-theme-55232 .pum-container, .pum-theme-default-theme-2 .pum-container { padding: 18px; border-radius: 0px; border: 1px none #000000; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.23 ); background-color: rgba( 249, 249, 249, 1 ) } 
+.pum-theme-55232 .pum-title, .pum-theme-default-theme-2 .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: inherit; font-size: 32px; font-style: normal; line-height: 36px } 
+.pum-theme-55232 .pum-content, .pum-theme-default-theme-2 .pum-content { color: #8c8c8c; font-family: inherit; font-weight: inherit; font-style: normal } 
+.pum-theme-55232 .pum-content + .pum-close, .pum-theme-default-theme-2 .pum-content + .pum-close { height: auto; width: auto; left: auto; right: 0px; bottom: auto; top: 0px; padding: 8px; color: #ffffff; font-family: inherit; font-weight: inherit; font-size: 12px; font-style: normal; line-height: 14px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 183, 205, 1 ) } 
+/* Popup Theme 55231: Default Theme */
+.pum-theme-55231, .pum-theme-default-theme { background-color: rgba( 255, 255, 255, 1 ) } 
+.pum-theme-55231 .pum-container, .pum-theme-default-theme .pum-container { padding: 18px; border-radius: 0px; border: 1px none #000000; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.23 ); background-color: rgba( 249, 249, 249, 1 ) } 
+.pum-theme-55231 .pum-title, .pum-theme-default-theme .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: inherit; font-size: 32px; font-style: normal; line-height: 36px } 
+.pum-theme-55231 .pum-content, .pum-theme-default-theme .pum-content { color: #8c8c8c; font-family: inherit; font-weight: inherit; font-style: normal } 
+.pum-theme-55231 .pum-content + .pum-close, .pum-theme-default-theme .pum-content + .pum-close { height: auto; width: auto; left: auto; right: 0px; bottom: auto; top: 0px; padding: 8px; color: #ffffff; font-family: inherit; font-weight: inherit; font-size: 12px; font-style: normal; line-height: 14px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 183, 205, 1 ) } 
+        </style><script type="text/javascript">
+	window._se_plugin_version = '8.1.6';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('http://www.creativeapplications.net/?wordfence_logHuman=1&amp;hid=271623D848F1087581D890927ABA30F9');
+</script><script type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "http://www.creativeapplications.net/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.6.3';
+	window._wp_rp_post_id = '60160';
+	window._wp_rp_num_rel_posts = '5';
+	window._wp_rp_thumbnails = true;
+	window._wp_rp_post_title = 'Random+Access+Memory+%E2%80%93+Materialising+mathematical+process+%28algorithm%29';
+	window._wp_rp_post_tags = ['computation', 'software', 'machine', 'memory', 'memory+storage', 'performance', 'process', 'ralf+baecker', 'processing', 'technolog', 'berlin', 'stone', 'axi', 'arab', 'camera', 'sand', 'disc', 'memori', 'storag', 'binari', 'digit', 'scienc', 'comput', 'contemporari'];
+	window._wp_rp_promoted_content = false;
+</script>
+<style type="text/css">
+.related_post_title {
+}
+ul.related_post {
+}
+ul.related_post li {
+}
+ul.related_post li a {
+}
+ul.related_post li img {
+}</style>
+
+<!-- Protected by WP-SpamFree :: JS BEGIN -->
+<script type="text/javascript" src="http://www.creativeapplications.net/wp-content/plugins/wp-spamfree/js/wpsfv2-js.php"></script> 
+<!-- Protected by WP-SpamFree :: JS END -->
+
+
+<link rel='dns-prefetch' href='http://v0.wordpress.com/'>
+	<style type="text/css">
+		.widget-area p.summary a,
+		.entry-content p a,
+		blockquote cite a,
+		.textwidget a,
+		#comments .comment-text a,
+		.authorbox p.author-description a {color: #000;}
+		.widget_zuki_recentposts_color .bg-wrap {background: #e2e2e2;}
+		.archive-menu-content {background: #e5e5e5;}
+	</style>
+    	<style type="text/css" id="zuki-header-css">
+			#site-title h1,
+		#site-title h2.site-description {
+			display: none;
+		}
+
+		</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f1f1f1; }
+</style>
+<link rel="icon" href="../../wp-content/uploads/2015/03/CAN_sitelogo-55171182v1_site_icon-32x32.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/2015/03/CAN_sitelogo-55171182v1_site_icon-256x256.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="../../wp-content/uploads/2015/03/CAN_sitelogo-55171182v1_site_icon-256x256.png" />
+<meta name="msapplication-TileImage" content="http://www.creativeapplications.net/wp-content/uploads/2015/03/CAN_sitelogo-55171182v1_site_icon-512x400.png" />
+
+
+	<script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '11l5Uf']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src='../../../autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();
+	</script>
+
+
+  <script src="../../../use.typekit.net/rvj5hzi.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+	<link rel="alternate" type="application/rss+xml" title="CAN Post RSS" href="http://www.creativeapplications.net/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="CAN Jobs RSS" href="http://www.creativeapplications.net/jobs-feed/" />
+
+</head>
+
+<body class="post-template-default single single-post postid-60160 single-format-standard custom-background">
+
+	
+	<div id="header_prom">
+
+    <a href="http://ca-n.in/can_head17"><img src="../../wp-content/uploads/2017/02/H_adm_TXT_CAN_Web.gif"></a>
+
+	</div>
+
+	
+	<div id="container">
+
+		<header id="masthead" class="cf" role="banner">
+
+							<nav id="header-top-nav">
+					<ul id="menu-top-menu" class="menu"><li id="menu-item-44208" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-44208"><a href="http://www.creativeapplications.net/blog/">Blog</a></li>
+<li id="menu-item-53006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53006"><a href="http://www.creativeapplications.net/holo/">Magazine</a></li>
+<li id="menu-item-53028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53028"><a href="http://www.creativeapplications.net/events/">Events</a></li>
+<li id="menu-item-58606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58606"><a href="http://www.creativeapplications.net/education/">Education</a></li>
+<li id="menu-item-40817" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-40817"><a href="http://www.creativeapplications.net/job-board/">Jobs</a></li>
+<li id="menu-item-54164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54164"><a href="http://www.creativeapplications.net/submit-project/">Submit</a></li>
+<li id="menu-item-46826" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46826"><a href="http://shop.creativeapplications.net/">Shop</a></li>
+</ul>
+
+
+					<div class="usermenu">
+
+
+
+													<ul class="menubutton" id="user"><a href="http://www.creativeapplications.net/membership-login/">Log in</a> / <a href="http://www.creativeapplications.net/register/">Membership</a>
+							</ul>
+						
+						
+
+					</div>
+
+
+				</nav><!-- end #header-top -->
+			
+			<div id="about">
+				<a href="http://www.creativeapplications.net/about/"><b>CreativeApplications.Net</b></a> reports innovation and catalogues projects, tools and platforms at the intersection of art, media and technology.<br>Read more <a href="http://www.creativeapplications.net/about/">here</a> or <a href="http://www.creativeapplications.net/contact/">contact</a>
+			</div>
+
+
+			<div id="site-title">
+
+			<!-- site logo here start -->
+
+			<div id="logo">
+			<a href="http://www.creativeapplications.net/" title="Home">
+				<canvas id="can_canvas" width="300" height="144">
+				<img src="../../images/cannewlogo.png">
+				</canvas>
+				</a>
+
+				<script type="text/javascript" src="../../wp-content/themes/CAN3/scripts/triangulate.js"></script>
+				<script type="text/javascript" src="../../wp-content/themes/CAN3/scripts/particle.js"></script>
+				<script type="text/javascript" src="../../wp-content/themes/CAN3/scripts/main.js"></script>
+
+			</div>
+
+			<!-- site logo here end -->
+
+							<h1><a href="http://www.creativeapplications.net/" title="CreativeApplications.Net">CreativeApplications.Net</a></h1>
+							<h2 class="site-description">Projects, tools and platforms at the intersection of art, media and technology</h2>
+						</div><!-- end #site-title -->
+
+			<a href="#menuopen" id="mobile-menu-toggle"><span>Menu</span></a>
+
+			<div id="mobile-menu-wrap" class="cf">
+									<div class="search-box">
+						<a href="#" id="search-toggle"><span>Search</span></a>
+						
+<form role="search" method="get" id="searchform" class="searchform" action="http://www.creativeapplications.net/" role="search">
+	<label for="s" class="screen-reader-text"><span>Search</span></label>
+	<input type="text" class="search-field" name="s" id="s" placeholder="Type to search&hellip;" />
+	<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+</form>					</div><!-- end .search-box -->
+								<nav id="site-nav" class="cf">
+					<ul id="menu-navigation-3" class="nav-menu"><li id="menu-item-44146" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-44146"><a href="http://www.creativeapplications.net/blog/">Blog</a></li>
+<li id="menu-item-44198" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-44198"><a href="http://www.creativeapplications.net/category/holo/">Magazine</a></li>
+<li id="menu-item-44199" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-44199"><a href="http://www.creativeapplications.net/category/can-events/">Events</a></li>
+<li id="menu-item-44149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44149"><a href="http://www.creativeapplications.net/job-board/">Jobs</a></li>
+<li id="menu-item-44197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44197"><a href="http://www.creativeapplications.net/shop/">Shop</a></li>
+</ul>				</nav><!-- end #site-nav -->
+				<a href="#menuclose" id="mobile-menu-close"><span>Close Menu</span></a>
+			</div><!-- end #mobile-menu-wrap -->
+
+							
+<div class="archive-menu-wrap cf">
+			<a href="#contents" class="archive-menu-toggle"><span>Filter Contents</span></a>
+	
+	<div class="archive-menu-content cf">
+		<a href="#closecontents" class="archive-menu-close"><span>Close Contents</span></a>
+
+		<div class="list-years">
+			<h3 class="archive-menu-title">Years</h3>
+			<ul class="yearly">
+					<li><a href='http://www.creativeapplications.net/2017/'>2017</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/'>2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/'>2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/'>2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/'>2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/'>2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/'>2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/'>2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/'>2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2008/'>2008</a></li>
+			</ul>
+		</div><!-- end .list-years -->
+
+		
+
+		<div class="list-months-cats-tags">
+			<h3 class="archive-menu-title">Filter by Month</h3>
+			<ul class="monthly">
+					<li><a href='http://www.creativeapplications.net/2017/03/'>March 2017</a></li>
+	<li><a href='http://www.creativeapplications.net/2017/02/'>February 2017</a></li>
+	<li><a href='http://www.creativeapplications.net/2017/01/'>January 2017</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/12/'>December 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/11/'>November 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/10/'>October 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/09/'>September 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/08/'>August 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/07/'>July 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/06/'>June 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/05/'>May 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/04/'>April 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/03/'>March 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/02/'>February 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2016/01/'>January 2016</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/12/'>December 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/11/'>November 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/10/'>October 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/09/'>September 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/08/'>August 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/07/'>July 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/06/'>June 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/05/'>May 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/04/'>April 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/03/'>March 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/02/'>February 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2015/01/'>January 2015</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/12/'>December 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/11/'>November 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/10/'>October 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/09/'>September 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/08/'>August 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/07/'>July 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/06/'>June 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/05/'>May 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/04/'>April 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/03/'>March 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/02/'>February 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2014/01/'>January 2014</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/12/'>December 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/11/'>November 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/10/'>October 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/09/'>September 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/08/'>August 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/07/'>July 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/06/'>June 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/05/'>May 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/04/'>April 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/03/'>March 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/02/'>February 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2013/01/'>January 2013</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/12/'>December 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/11/'>November 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/10/'>October 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/09/'>September 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/08/'>August 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/07/'>July 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/06/'>June 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/05/'>May 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/04/'>April 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/03/'>March 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/02/'>February 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2012/01/'>January 2012</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/12/'>December 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/11/'>November 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/10/'>October 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/09/'>September 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/08/'>August 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/07/'>July 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/06/'>June 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/05/'>May 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/04/'>April 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/03/'>March 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/02/'>February 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2011/01/'>January 2011</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/12/'>December 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/11/'>November 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/10/'>October 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/09/'>September 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/08/'>August 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/07/'>July 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/06/'>June 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/05/'>May 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/04/'>April 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/03/'>March 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/02/'>February 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2010/01/'>January 2010</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/12/'>December 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/11/'>November 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/10/'>October 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/09/'>September 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/08/'>August 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/07/'>July 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/06/'>June 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/05/'>May 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/04/'>April 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/03/'>March 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/02/'>February 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2009/01/'>January 2009</a></li>
+	<li><a href='http://www.creativeapplications.net/2008/12/'>December 2008</a></li>
+	<li><a href='http://www.creativeapplications.net/2008/11/'>November 2008</a></li>
+	<li><a href='http://www.creativeapplications.net/2008/10/'>October 2008</a></li>
+			</ul>
+
+			<h3 class="archive-menu-title">Filter by Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-4"><a href="http://www.creativeapplications.net/category/android/" >Android</a>
+</li>
+	<li class="cat-item cat-item-1525"><a href="http://www.creativeapplications.net/category/arduino-2/" title="Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software. It&#039;s intended for artists, designers, hobbyists, and anyone interested in creating interactive objects or environments. More Info">Arduino</a>
+</li>
+	<li class="cat-item cat-item-584"><a href="http://www.creativeapplications.net/category/c/" >c++</a>
+</li>
+	<li class="cat-item cat-item-3053"><a href="http://www.creativeapplications.net/category/can-events/" >CAN Events</a>
+</li>
+	<li class="cat-item cat-item-1137"><a href="http://www.creativeapplications.net/category/canapps-2/" >CANApps</a>
+</li>
+	<li class="cat-item cat-item-3912"><a href="http://www.creativeapplications.net/category/can_labs/" >CAN_Labs</a>
+</li>
+	<li class="cat-item cat-item-644"><a href="http://www.creativeapplications.net/category/cinder/" title="Cinder provides a powerful, intuitive toolbox for programming graphics, audio, video, networking, image processing and computational geometry. Cinder is cross-platform, and in general the exact same code works under Mac OS X, Windows and a growing list of other platforms — most recently the iPhone and iPad. Cinder is designed to take advantage of platforms’ native capabilities whenever it’s possible, and relies on a minimum of 3rd party libraries. This makes for much lighter, faster applications, and means Cinder apps get free performance, security and capability upgrades whenever the operating system does. More Info">Cinder</a>
+</li>
+	<li class="cat-item cat-item-4100"><a href="http://www.creativeapplications.net/category/education/" >Education</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="http://www.creativeapplications.net/category/environment/" >Environment</a>
+</li>
+	<li class="cat-item cat-item-236"><a href="http://www.creativeapplications.net/category/events/" >Events</a>
+</li>
+	<li class="cat-item cat-item-578"><a href="http://www.creativeapplications.net/category/featured/" >Featured</a>
+</li>
+	<li class="cat-item cat-item-4514"><a href="http://www.creativeapplications.net/category/features/" >Features</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://www.creativeapplications.net/category/flash/" >Flash</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://www.creativeapplications.net/category/games/" >Games</a>
+</li>
+	<li class="cat-item cat-item-2859"><a href="http://www.creativeapplications.net/category/holo/" title="Today’s most evocative art and design draws on scientific research, emerging technology, and defies categorization. HOLO is a new magazine dedicated to this milieu that reveals the faces and personalities behind groundbreaking work.
+
+HOLO is magazine about emerging trajectories in art, science, and technology
+
+http://holo-magazine.com">HOLO</a>
+</li>
+	<li class="cat-item cat-item-363"><a href="http://www.creativeapplications.net/category/inspiration/" >Inspiration</a>
+</li>
+	<li class="cat-item cat-item-3612"><a href="http://www.creativeapplications.net/category/i-os/" >iOS</a>
+</li>
+	<li class="cat-item cat-item-411"><a href="http://www.creativeapplications.net/category/java/" >Java</a>
+</li>
+	<li class="cat-item cat-item-1811"><a href="http://www.creativeapplications.net/category/js/" >Javascript</a>
+</li>
+	<li class="cat-item cat-item-1765"><a href="http://www.creativeapplications.net/category/job/" >Jobs</a>
+</li>
+	<li class="cat-item cat-item-3107"><a href="http://www.creativeapplications.net/category/jobs-archive/" >Jobs-Archive</a>
+</li>
+	<li class="cat-item cat-item-2491"><a href="http://www.creativeapplications.net/category/jobs-featured/" >Jobs-Featured</a>
+</li>
+	<li class="cat-item cat-item-2721"><a href="http://www.creativeapplications.net/category/kids/" >Kids</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://www.creativeapplications.net/category/linux/" >Linux</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://www.creativeapplications.net/category/mac/" >Mac</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://www.creativeapplications.net/category/maxmsp/" title="Max gives you the parts to create unique sounds, stunning visuals, and engaging interactive media. These parts are called ‘objects’ – visual boxes that contain tiny programs to do something specific. Each object does something different. Some make noises, some make video effects, others just do simple calculations or make decisions. In Max you add objects to a visual canvas and connect them together with patchcords. You can use as many as you like. By combining objects, you create interactive and unique software without ever writing any code (you can do that too if you really want to). Just connect. More Info">MaxMSP</a>
+</li>
+	<li class="cat-item cat-item-2704"><a href="http://www.creativeapplications.net/category/member-submissions/" >Member Submissions</a>
+</li>
+	<li class="cat-item cat-item-2954"><a href="http://www.creativeapplications.net/category/membersonly/" >Members</a>
+</li>
+	<li class="cat-item cat-item-4749"><a href="http://www.creativeapplications.net/category/members-featured/" >Members Featured</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://www.creativeapplications.net/category/news/" >News</a>
+</li>
+	<li class="cat-item cat-item-247"><a href="http://www.creativeapplications.net/category/objects/" >Objects</a>
+</li>
+	<li class="cat-item cat-item-2744"><a href="http://www.creativeapplications.net/category/ontheweb/" >ontheweb</a>
+</li>
+	<li class="cat-item cat-item-261"><a href="http://www.creativeapplications.net/category/openframeworks/" title="Openframeworks is a c++ library designed to assist the creative process by providing a simple and intuitive framework for experimentation. The library is designed to work as a general purpose glue, and wraps together several commonly used libraries under a tidy interface: openGL for graphics, rtAudio for audio input and output, freeType for fonts,freeImage for image input and output, quicktime for video playing and sequence grabbing. The code is written to be both cross platform (PC, Mac, Linux, iPhone) and cross compiler. The API is designed to be minimal and easy to grasp. There are very few classes, and inside of those classes, there are very few functions. The code has been implemented so that within the classes there are minimal cross-referening, making it quite easy to rip out and reuse, if you need, or to extend. More Info">openFrameworks</a>
+</li>
+	<li class="cat-item cat-item-1547"><a href="http://www.creativeapplications.net/category/other/" >Other</a>
+</li>
+	<li class="cat-item cat-item-3491"><a href="http://www.creativeapplications.net/category/js/paper-js/" >Paper Js</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="http://www.creativeapplications.net/category/processing/" title="Processing is an open source programming language and environment for people who want to create images, animations, and interactions. Initially developed to serve as a software sketchbook and to teach fundamentals of computer programming within a visual context, Processing also has evolved into a tool for generating finished professional work. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production. More Info">Processing</a>
+</li>
+	<li class="cat-item cat-item-437"><a href="http://www.creativeapplications.net/category/profile/" >Profile</a>
+</li>
+	<li class="cat-item cat-item-596"><a href="http://www.creativeapplications.net/category/quarz-composer/" title="Quartz Composer is a graphics development environment that allows you to explore the incredible power of the graphics stack of Mac OS X Tiger. With Quartz Composer, you can easily combine the capabilities of Cocoa, Quartz 2D, Core Image, OpenGL, and QuickTime, all using an approachable visual programming paradigm. Use Quartz Composer to prototype Core Image filters, build engaging screen savers, create custom user-interface widgets, make data-driven visual effects, and even perform live performance animations. More Info">Quarz Composer</a>
+</li>
+	<li class="cat-item cat-item-3001"><a href="http://www.creativeapplications.net/category/resonate-2/" >Resonate</a>
+</li>
+	<li class="cat-item cat-item-1390"><a href="http://www.creativeapplications.net/category/reviews/" >Review</a>
+</li>
+	<li class="cat-item cat-item-4728"><a href="http://www.creativeapplications.net/category/robotics/" >Robotics</a>
+</li>
+	<li class="cat-item cat-item-4465"><a href="http://www.creativeapplications.net/category/science/" >Science</a>
+</li>
+	<li class="cat-item cat-item-20"><a href="http://www.creativeapplications.net/category/scripts/" >Scripts</a>
+</li>
+	<li class="cat-item cat-item-5047"><a href="http://www.creativeapplications.net/category/shop/" >Shop</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://www.creativeapplications.net/category/sound/" >Sound</a>
+</li>
+	<li class="cat-item cat-item-4829"><a href="http://www.creativeapplications.net/category/sponsored/" >Sponsored</a>
+</li>
+	<li class="cat-item cat-item-176"><a href="http://www.creativeapplications.net/category/theory/" >Theory</a>
+</li>
+	<li class="cat-item cat-item-2666"><a href="http://www.creativeapplications.net/category/js/three-js/" title="The aim of the project is to create a lightweight 3D library with a very low level of complexity — in other words, for dummies. The library provides , , CSS3D and WebGL renderers. More Info">Three Js</a>
+</li>
+	<li class="cat-item cat-item-3704"><a href="http://www.creativeapplications.net/category/derivative-touchdesigner/" >TouchDesigner</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://www.creativeapplications.net/category/tutorials/" >Tutorials</a>
+</li>
+	<li class="cat-item cat-item-3421"><a href="http://www.creativeapplications.net/category/unity-3d/" >Unity</a>
+</li>
+	<li class="cat-item cat-item-3616"><a href="http://www.creativeapplications.net/category/vid/" >Video</a>
+</li>
+	<li class="cat-item cat-item-744"><a href="http://www.creativeapplications.net/category/vvvv/" title="vvvv is a graphical programming environment for easy prototyping and development. It is designed to facilitate the handling of large media environments with physical interfaces, real-time motion graphics, audio and video that can interact with many users simultaneously. vvvv is currently windows only but there are plans to release a mac version in near future. More Info">vvvv</a>
+</li>
+	<li class="cat-item cat-item-24"><a href="http://www.creativeapplications.net/category/webapp/" >WebApp</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="http://www.creativeapplications.net/category/windows/" >Windows</a>
+</li>
+			</ul>
+
+			<h3 class="archive-menu-title">Filter by Tags</h3>
+			<div class="archive-menu-tags">
+				<a href='http://www.creativeapplications.net/tag/3d/' class='tag-link-26 tag-link-position-1' title='136 topics' style='font-size: 11.721518987342pt;'>3d</a> / <a href='http://www.creativeapplications.net/tag/animation/' class='tag-link-226 tag-link-position-2' title='93 topics' style='font-size: 8.7088607594937pt;'>animation</a> / <a href='http://www.creativeapplications.net/tag/appstore/' class='tag-link-35 tag-link-position-3' title='380 topics' style='font-size: 19.518987341772pt;'>AppStore</a> / <a href='http://www.creativeapplications.net/tag/arduino/' class='tag-link-351 tag-link-position-4' title='192 topics' style='font-size: 14.379746835443pt;'>arduino</a> / <a href='http://www.creativeapplications.net/tag/art/' class='tag-link-37 tag-link-position-5' title='190 topics' style='font-size: 14.20253164557pt;'>art</a> / <a href='http://www.creativeapplications.net/tag/code/' class='tag-link-50 tag-link-position-6' title='207 topics' style='font-size: 14.911392405063pt;'>code</a> / <a href='http://www.creativeapplications.net/tag/coder/' class='tag-link-1972 tag-link-position-7' title='133 topics' style='font-size: 11.544303797468pt;'>coder</a> / <a href='http://www.creativeapplications.net/tag/creative-code/' class='tag-link-1766 tag-link-position-8' title='145 topics' style='font-size: 12.075949367089pt;'>creative code</a> / <a href='http://www.creativeapplications.net/tag/data/' class='tag-link-61 tag-link-position-9' title='149 topics' style='font-size: 12.430379746835pt;'>data</a> / <a href='http://www.creativeapplications.net/tag/design/' class='tag-link-62 tag-link-position-10' title='115 topics' style='font-size: 10.303797468354pt;'>design</a> / <a href='http://www.creativeapplications.net/tag/download/' class='tag-link-295 tag-link-position-11' title='91 topics' style='font-size: 8.5316455696203pt;'>download</a> / <a href='http://www.creativeapplications.net/tag/drawing/' class='tag-link-69 tag-link-position-12' title='148 topics' style='font-size: 12.253164556962pt;'>drawing</a> / <a href='http://www.creativeapplications.net/tag/events/' class='tag-link-4373 tag-link-position-13' title='279 topics' style='font-size: 17.215189873418pt;'>Events</a> / <a href='http://www.creativeapplications.net/tag/exhibition/' class='tag-link-75 tag-link-position-14' title='87 topics' style='font-size: 8.1772151898734pt;'>exhibition</a> / <a href='http://www.creativeapplications.net/tag/featured-2/' class='tag-link-3851 tag-link-position-15' title='86 topics' style='font-size: 8.1772151898734pt;'>featured</a> / <a href='http://www.creativeapplications.net/tag/flash/' class='tag-link-4361 tag-link-position-16' title='96 topics' style='font-size: 9.0632911392405pt;'>Flash</a> / <a href='http://www.creativeapplications.net/tag/full-time/' class='tag-link-1767 tag-link-position-17' title='92 topics' style='font-size: 8.7088607594937pt;'>full time</a> / <a href='http://www.creativeapplications.net/tag/game/' class='tag-link-235 tag-link-position-18' title='85 topics' style='font-size: 8pt;'>game</a> / <a href='http://www.creativeapplications.net/tag/games/' class='tag-link-4362 tag-link-position-19' title='161 topics' style='font-size: 12.962025316456pt;'>Games</a> / <a href='http://www.creativeapplications.net/tag/generative/' class='tag-link-85 tag-link-position-20' title='277 topics' style='font-size: 17.037974683544pt;'>generative</a> / <a href='http://www.creativeapplications.net/tag/installation/' class='tag-link-103 tag-link-position-21' title='313 topics' style='font-size: 18.101265822785pt;'>installation</a> / <a href='http://www.creativeapplications.net/tag/interactive/' class='tag-link-104 tag-link-position-22' title='86 topics' style='font-size: 8.1772151898734pt;'>interactive</a> / <a href='http://www.creativeapplications.net/tag/interface/' class='tag-link-105 tag-link-position-23' title='198 topics' style='font-size: 14.556962025316pt;'>Interface</a> / <a href='http://www.creativeapplications.net/tag/ipad/' class='tag-link-761 tag-link-position-24' title='169 topics' style='font-size: 13.316455696203pt;'>iPad</a> / <a href='http://www.creativeapplications.net/tag/iphone/' class='tag-link-10 tag-link-position-25' title='461 topics' style='font-size: 20.936708860759pt;'>iPhone</a> / <a href='http://www.creativeapplications.net/tag/jobs/' class='tag-link-922 tag-link-position-26' title='519 topics' style='font-size: 22pt;'>jobs</a> / <a href='http://www.creativeapplications.net/tag/light/' class='tag-link-110 tag-link-position-27' title='110 topics' style='font-size: 10.126582278481pt;'>light</a> / <a href='http://www.creativeapplications.net/tag/london/' class='tag-link-308 tag-link-position-28' title='201 topics' style='font-size: 14.73417721519pt;'>London</a> / <a href='http://www.creativeapplications.net/tag/mac/' class='tag-link-4364 tag-link-position-29' title='112 topics' style='font-size: 10.126582278481pt;'>Mac</a> / <a href='http://www.creativeapplications.net/tag/music/' class='tag-link-121 tag-link-position-30' title='256 topics' style='font-size: 16.506329113924pt;'>music</a> / <a href='http://www.creativeapplications.net/tag/objects/' class='tag-link-4374 tag-link-position-31' title='114 topics' style='font-size: 10.303797468354pt;'>Objects</a> / <a href='http://www.creativeapplications.net/tag/openframeworks/' class='tag-link-4375 tag-link-position-32' title='302 topics' style='font-size: 17.746835443038pt;'>openFrameworks</a> / <a href='http://www.creativeapplications.net/tag/particles/' class='tag-link-129 tag-link-position-33' title='84 topics' style='font-size: 8pt;'>particles</a> / <a href='http://www.creativeapplications.net/tag/performance/' class='tag-link-130 tag-link-position-34' title='131 topics' style='font-size: 11.367088607595pt;'>performance</a> / <a href='http://www.creativeapplications.net/tag/photography/' class='tag-link-131 tag-link-position-35' title='93 topics' style='font-size: 8.7088607594937pt;'>photography</a> / <a href='http://www.creativeapplications.net/tag/process/' class='tag-link-1266 tag-link-position-36' title='157 topics' style='font-size: 12.784810126582pt;'>process</a> / <a href='http://www.creativeapplications.net/tag/processing/' class='tag-link-4367 tag-link-position-37' title='347 topics' style='font-size: 18.810126582278pt;'>Processing</a> / <a href='http://www.creativeapplications.net/tag/projection/' class='tag-link-332 tag-link-position-38' title='109 topics' style='font-size: 9.9493670886076pt;'>projection</a> / <a href='http://www.creativeapplications.net/tag/retro/' class='tag-link-151 tag-link-position-39' title='98 topics' style='font-size: 9.2405063291139pt;'>retro</a> / <a href='http://www.creativeapplications.net/tag/sound/' class='tag-link-4368 tag-link-position-40' title='373 topics' style='font-size: 19.341772151899pt;'>Sound</a> / <a href='http://www.creativeapplications.net/tag/technologist/' class='tag-link-1871 tag-link-position-41' title='85 topics' style='font-size: 8pt;'>technologist</a> / <a href='http://www.creativeapplications.net/tag/video/' class='tag-link-191 tag-link-position-42' title='141 topics' style='font-size: 11.898734177215pt;'>video</a> / <a href='http://www.creativeapplications.net/tag/visualisation/' class='tag-link-193 tag-link-position-43' title='90 topics' style='font-size: 8.5316455696203pt;'>visualisation</a> / <a href='http://www.creativeapplications.net/tag/visualization/' class='tag-link-460 tag-link-position-44' title='110 topics' style='font-size: 10.126582278481pt;'>visualization</a> / <a href='http://www.creativeapplications.net/tag/webapp/' class='tag-link-4370 tag-link-position-45' title='113 topics' style='font-size: 10.303797468354pt;'>WebApp</a>			</div>
+		</div><!-- end .list-months-cats-tags -->
+
+	</div><!-- end .archive-menu-content -->
+</div><!-- end #archive-menu-wrap -->			
+		</header><!-- end #masthead -->
+
+<div id="main-wrap">
+
+	<div id="primary" class="site-content cf" role="main">
+		
+<!-- facebook start -->
+
+<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "../../../connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=362855297078674&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!-- facebook end -->
+
+
+<article id="post-60160" class="post-60160 post type-post status-publish format-standard has-post-thumbnail hentry category-processing tag-computation tag-machine tag-memory tag-memory-storage tag-performance tag-process tag-ralf-baecker tag-software">
+
+	<header class="entry-header">
+		<div class="entry-cats">
+			<a href="http://www.creativeapplications.net/category/processing/" rel="category tag">Processing</a>		</div><!-- end .entry-cats -->
+
+		<div class="entry-date">
+			Published: <a href="index.html">07/12/2016</a> | Views: 2,342 |
+		</div><!-- end .entry-date -->
+					<div class="entry-comments">
+				<a href="index.html#respond"><span class="dsq-postid" data-dsqidentifier="60160 http://www.creativeapplications.net/?p=60160"><span class="leave-reply">Leave a comment</span></span></a>			</div><!-- end .entry-comments -->
+				
+		<h1 class="entry-title">Random Access Memory – Materialising mathematical process (algorithm)</h1>
+		<div class="entry-author">
+			written by <a href="http://www.creativeapplications.net/author/filip/" title="All posts by Filip Visnjic">Filip Visnjic</a>		</div><!-- end .entry-author -->
+
+	</header><!-- end .entry-header -->
+
+			<div class="entry-thumbnail">
+			<a href="../../wp-content/uploads/2016/12/RAM_02-1.jpg" data-rel="lightbox-gallery-2" title="Permalink to Random Access Memory – Materialising mathematical process (algorithm)"><img width="1667" height="1253" src="../../wp-content/uploads/2016/12/RAM_02-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_02-1.jpg 1667w, http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_02-1-768x577.jpg 768w" sizes="(max-width: 1667px) 100vw, 1667px" /></a>
+		</div><!-- end .entry-thumbnail -->
+	
+	<div class="entry-content">
+		<p>Created by Berlin based <a href="http://www.creativeapplications.net/tag/Ralf-Baecker/">Ralf Baecker</a>, <em>Random Access Memory</em> is a fully functional digital memory. Instead of operating on semi-conducting components to represent either the binary states of 0 (zero) or 1 (one), the memory uses grains of sand as storage material. In addition, the machine performs a computational process on this memory.</p>
+<blockquote><p><em>Random Access Memory</em> reflects on the interaction of idea and matter and their encounter in contemporary information technology. The use of sand as a medium refers to an old divination technique, called geomancy, originated from the arabic ‛ilm al-raml which translates as &#8220;science of the sand&#8221; and defines a set of rules, to recursively manipulate figures of geological material (eg. stones or sand) to be interpreted by the geomancer.</p></blockquote>
+<div id="attachment_60169" style="width: 1450px" class="wp-caption alignnone"><a href="../../wp-content/uploads/2016/12/ram_screenshot.png" data-rel="lightbox-gallery-PfnJ" data-imagelightbox="0" title=""><img class="wp-image-60169 size-full" src="../../wp-content/uploads/2016/12/ram_screenshot.png" alt="ram_screenshot" width="1440" height="864" srcset="http://www.creativeapplications.net/wp-content/uploads/2016/12/ram_screenshot.png 1440w, http://www.creativeapplications.net/wp-content/uploads/2016/12/ram_screenshot-768x461.png 768w" sizes="(max-width: 1440px) 100vw, 1440px" /></a><p class="wp-caption-text">↑ Processing is used to read, place or remove sand on a rotating disc by a three axis pick and place mechanism combined with a microscope camera to track the position.</p></div>
+<p>Sand grains can be read, placed or removed on a rotating disc by a three axis pick and place mechanism combined with a microscope camera to track the position of a single sand grain. This memory mechanism is prone to errors thru misreadings, bouncing grains and other imponderabilities. The algorithm, executed on the sand grains, is a so called <em>Turmite</em>, a two dimensional operating Turing Machine. It’s only goal it is to write as many 1’s (stones) as possible in the memory and to avoid a termination, following a strict rule. This process emerges complex and repetitive pattern on the disc. Finally, R A M investigates the contrast of a “pure” mathematical process (algorithm) and it’s “impure” material implementation into the world.</p>
+<p>The software is realised in Processing. It is using a microscope camera to track a stone in order to align the pick and place mechanism exactly above the grain. The hardware uses a teensy board to control the ventile and the three stepper motors for each axis. It is a polar coordinate system. There is no X or Y axis but radius and angle. Another Z-axis move the pick and place head up and down.</p>
+<p><a href="http://www.rlfbckr.org/" target="_blank">Project Page</a> | <a href="http://rlfbckr.org/" target="_blank">Ralf Baecker</a></p>
+<div class="embed-vimeo" style="text-align: center;"><iframe src="https://player.vimeo.com/video/194136714" width="840" height="473" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div id='gallery-1' class='gallery galleryid-60160 gallery-columns-2 gallery-size-thumbnail'><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href='../../wp-content/uploads/2016/12/RAM_03.jpg' data-rel="lightbox-gallery-1"><img width="640" height="400" src="../../wp-content/uploads/2016/12/RAM_03-640x400.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_03-640x400.jpg 640w, http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_03-800x500.jpg 800w, http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_03-1600x1000.jpg 1600w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+			</dt></dl><dl class='gallery-item'>
+			<dt class='gallery-icon landscape'>
+				<a href='../../wp-content/uploads/2016/12/RAM_05.jpg' data-rel="lightbox-gallery-1"><img width="640" height="400" src="../../wp-content/uploads/2016/12/RAM_05-640x400.jpg" class="attachment-thumbnail size-thumbnail" alt="" srcset="http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_05-640x400.jpg 640w, http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_05-800x500.jpg 800w, http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_05-1600x1000.jpg 1600w" sizes="(max-width: 640px) 100vw, 640px" /></a>
+			</dt></dl><br style="clear: both" />
+		</div>
+
+<p><a href="../../wp-content/uploads/2016/12/RAM_06.jpg" data-rel="lightbox-gallery-PfnJ" data-imagelightbox="1" title=""><img class="size-medium wp-image-60168" src="../../wp-content/uploads/2016/12/RAM_06-800x500.jpg" alt="LG-H815" width="800" height="500" srcset="http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_06-800x500.jpg 800w, http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_06-640x400.jpg 640w, http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_06-1600x1000.jpg 1600w" sizes="(max-width: 800px) 100vw, 800px" /></a></p>
+<p><a href="../../wp-content/uploads/2016/12/RAM_01.jpg" data-rel="lightbox-gallery-PfnJ" data-imagelightbox="2" title=""><img class="alignnone size-full wp-image-60163" src="../../wp-content/uploads/2016/12/RAM_01.jpg" alt="ram_01" width="1067" height="1600" srcset="http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_01.jpg 1067w, http://www.creativeapplications.net/wp-content/uploads/2016/12/RAM_01-768x1152.jpg 768w" sizes="(max-width: 1067px) 100vw, 1067px" /></a></p>
+
+<div class="wp_rp_wrap  wp_rp_plain" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">More like this:</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-53741" data-post-type="none" ><a href="http://www.creativeapplications.net/processing/weaved-programmable-textile-modelling-fabrics-into-three-dimensional-structures/" class="wp_rp_thumbnail"><img src="../../wp-content/uploads/2016/02/Still_Daniel-Shechter_1.5-150x150.jpg" alt="Weaved. Programmable Textile – Modelling fabrics into three-dimensional structures" width="150" height="150" /></a><a href="http://www.creativeapplications.net/processing/weaved-programmable-textile-modelling-fabrics-into-three-dimensional-structures/" class="wp_rp_title">Weaved. Programmable Textile – Modelling fabrics into three-dimensional structures</a></li><li data-position="1" data-poid="in-44719" data-post-type="none" ><a href="http://www.creativeapplications.net/processing/attachment-by-david-colombini-poetic-machine-to-send-messages-to-someone-somewhere/" class="wp_rp_thumbnail"><img src="../../wp-content/uploads/2014/10/Attachment-by-David-Colombini_01-150x150.jpg" alt="Attachment by David Colombini &#8211; Poetic machine to send messages to someone, somewhere" width="150" height="150" /></a><a href="http://www.creativeapplications.net/processing/attachment-by-david-colombini-poetic-machine-to-send-messages-to-someone-somewhere/" class="wp_rp_title">Attachment by David Colombini &#8211; Poetic machine to send messages to someone, somewhere</a></li><li data-position="2" data-poid="in-60498" data-post-type="none" ><a href="http://www.creativeapplications.net/features/can_2016/" class="wp_rp_thumbnail"><img src="../../wp-content/uploads/2016/12/can2016_2-150x150.gif" alt="CAN 2016 – Highlights and Favourites" width="150" height="150" /></a><a href="http://www.creativeapplications.net/features/can_2016/" class="wp_rp_title">CAN 2016 – Highlights and Favourites</a></li><li data-position="3" data-poid="in-3725" data-post-type="none" ><a href="http://www.creativeapplications.net/mac/daisydisk-mac/" class="wp_rp_thumbnail"><img src="../../wp-content/uploads/2009/07/DaisyDisk-4-150x150.png" alt="DaisyDisk [Mac]" width="150" height="150" /></a><a href="http://www.creativeapplications.net/mac/daisydisk-mac/" class="wp_rp_title">DaisyDisk [Mac]</a></li><li data-position="4" data-poid="in-49868" data-post-type="none" ><a href="http://www.creativeapplications.net/vvvv/pow2045-generative-design-meets-urban-choreography/" class="wp_rp_thumbnail"><img src="../../wp-content/uploads/2015/06/pow2045__MG_1679-150x150.jpg" alt="Pow2045 &#8211; Generative design meets urban choreography" width="150" height="150" /></a><a href="http://www.creativeapplications.net/vvvv/pow2045-generative-design-meets-urban-choreography/" class="wp_rp_title">Pow2045 &#8211; Generative design meets urban choreography</a></li></ul></div></div>
+<span style="clear:both;display:none;"><img src="http://www.creativeapplications.net/wp-content/plugins/wp-spamfree/img/wpsf-img.php" width="0" height="0" alt="" style="border-style:none;width:0px;height:0px;display:none;" /></span>			</div><!-- end .entry-content -->
+
+
+
+	<div id="sociallinks">
+
+		<li>
+			<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="creativeapps">Tweet</a><script type="text/javascript" src="../../../platform.twitter.com/widgets.js"></script>
+		</li>
+
+		<li style="margin-right:25px;margin-left:15px">
+			<div class="fb-like" data-send="false" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+		</li>
+
+		<li style="margin-right:0px">
+			<a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+			<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="../../../widgets.getpocket.com/v1/j/btn3860.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+		</li>
+
+	</div>
+
+	<footer class="entry-meta">
+		<div class="entry-cats">
+			<span>Filed under: </span><a href="http://www.creativeapplications.net/category/processing/" rel="category tag">Processing</a>		</div><!-- end .entry-cats -->
+						<div class="entry-tags"><span>Tagged with: </span><a href="http://www.creativeapplications.net/tag/computation/" rel="tag">computation</a>, <a href="http://www.creativeapplications.net/tag/machine/" rel="tag">machine</a>, <a href="http://www.creativeapplications.net/tag/memory/" rel="tag">memory</a>, <a href="http://www.creativeapplications.net/tag/memory-storage/" rel="tag">memory storage</a>, <a href="http://www.creativeapplications.net/tag/performance/" rel="tag">performance</a>, <a href="http://www.creativeapplications.net/tag/process/" rel="tag">process</a>, <a href="http://www.creativeapplications.net/tag/ralf-baecker/" rel="tag">Ralf Baecker</a>, <a href="http://www.creativeapplications.net/tag/software/" rel="tag">software</a></div>
+		
+					<div class="authorbox cf">
+				<div class="author-info">
+					<h3 class="author-name"><span>by </span><a href='http://www.creativeapplications.net/author/filip/' rel='author'>Filip Visnjic</a></h3>
+					<img alt='' src='http://1.gravatar.com/avatar/d1c8dd87a0ca500706e5de8d45d906c8?s=120&amp;d=blank&amp;r=g' srcset='http://1.gravatar.com/avatar/d1c8dd87a0ca500706e5de8d45d906c8?s=240&amp;d=blank&amp;r=g 2x' class='avatar avatar-120 photo' height='120' width='120' />					<p class="author-description">Editor-in-chief at CreativeApplications.Net, co-founder and editorial director at <a href="http://www.holo-magazine.com/">HOLO Magazine</a>, director of platform at <a href="http://frm.fm/">FRM</a> and researcher/lecturer at the University of Westminster, London.</p>
+				</div><!-- end .author-info -->
+			</div><!-- end .author-wrap -->
+			</footer><!-- end .entry-meta -->
+</article><!-- end .post-60160 -->
+
+<div id="disqus_thread">
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'index.html';
+var disqus_identifier = '60160%20http_/www.creativeapplications.net/index15df.html?p=60160';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'creativeapps';
+var disqus_title = "Random Access Memory – Materialising mathematical process (algorithm)";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'index888c.html?cf_action=sync_comments&amp;post_id=60160';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+		
+		
+
+			<div class="nav-wrap cf">
+		<nav id="nav-single">
+			<div class="nav-previous"><a href="http://www.creativeapplications.net/news/vector-festival-2017-call-for-submissions/" rel="prev"><span class="meta-nav">Previous Post</span>Vector Festival 2017 &#8211; Call for Submissions</a></div>
+			<div class="nav-next"><a href="http://www.creativeapplications.net/news/can-favorites-2016-vote-now/" rel="next"><span class="meta-nav">Next Post</span>CAN Favorites 2016 – Vote Now!</a></div>
+		</nav><!-- #nav-single -->
+	</div><!-- end .nav-wrap -->
+	
+	</div><!-- end #primary -->
+
+
+
+<div id="blog-sidebar" class="default-sidebar widget-area" role="complementary">
+
+	<div id="socialicons">
+	<a href="https://www.instagram.com/creativeappsnet/"><img src="../../images/social/instagram.png"></a> <a href="https://www.facebook.com/creativeapps"><img src="../../images/social/facebook.png"></a> <a href="http://twitter.com/creativeapps"><img src="../../images/social/twitter.png"></a> <a href="http://vimeo.com/groups/creativeapps"><img src="../../images/social/vimeo.png"></a> <a href="https://vine.co/creativeapps"><img src="../../images/social/vine.png"></a> <a href="https://github.com/CreativeApplicationsNet"><img src="../../images/social/github.png"></a> <a href="http://www.flickr.com/groups/creativeapps/pool/"><img src="../../images/social/flickr.png"></a> <a href="http://www.creativeapplications.net/feed/"><img src="../../images/social/rss.png"></a>
+	</div>
+
+
+		
+			<aside id="zuki_recentposts_small_two-3" class="widget widget_zuki_recentposts_small_two">
+
+				<div class="widget-title-wrap">
+					<h3 class="widget-title">Advertisment</h3>
+				</div>
+
+				<article class="rp-small-two">
+						<a href="http://ca-n.in/2gQfrrS" target="_blank"><img src="../../wp-content/uploads/2016/12/ucl_600.gif"></a>
+
+				</article>
+
+				<article class="rp-small-two">
+						<a href="http://ca-n.in/eyeo2017" target="_blank"><img src="../../wp-content/uploads/2017/02/eyeoBanner_CAN750.gif"></a>
+
+				</article>
+
+				<article class="rp-small-two">
+					<div class="boooo">
+					<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+					<!-- CAN Top Right -->
+					<ins class="adsbygoogle"
+					     style="display:block"
+					     data-ad-client="ca-pub-5819942721922249"
+					     data-ad-slot="1800224003"
+					     data-ad-format="auto"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+					</div>
+			 </article>
+
+			</aside>
+
+		
+
+	<aside id="zuki_recentposts_small_two-6" class="widget widget_zuki_recentposts_small_two">
+		<div class="widget-title-wrap"><h3 class="widget-title"><span>Featured Jobs</span></h3></div>
+
+
+       <article class="rp-small-two">
+		<p class="summary"><a href="http://www.creativeapplications.net/jobs-featured/senior-developer-at-applied-works/" title="Permalink to Senior Developer at Applied Works"><span class="entry-title">Senior Developer at Applied Works</span> <p>We are looking for a highly skilled developer, experienced in building complex responsive JavaScript applications and high quality user interface components, with the ability to effectively communicate tech ideas, challenges and solutions.</p>
+</a></p>
+      </article><!--end .rp-small-two -->
+
+       <article class="rp-small-two">
+		<p class="summary"><a href="http://www.creativeapplications.net/jobs-featured/creative-producer-mw-at-milla-partner-gmbh/" title="Permalink to Creative Producer (m/w) at Milla &#038; Partner GmbH"><span class="entry-title">Creative Producer (m/w) at Milla &#038; Partner GmbH</span> <p>Milla &#038; Partner ist eine Agentur für Kommunikation im Raum. Kernkompetenz ist die Kreation und Umsetzung von Markenwelten, Ausstellungen, Messeauftritten und Events.</p>
+</a></p>
+      </article><!--end .rp-small-two -->
+
+       <article class="rp-small-two">
+		<p class="summary"><a href="http://www.creativeapplications.net/jobs-featured/creative-codingcomputer-science-instructor-part-time-at-lick-wilmerding-high-school/" title="Permalink to Creative Coding/Computer Science Instructor (Part Time) at Lick-Wilmerding High School"><span class="entry-title">Creative Coding/Computer Science Instructor (Part Time) at Lick-Wilmerding High School</span> <p>The Technical Arts Department is looking to hire an individual who sees themselves as a highly collaborative and creative maker with a background in computer programming and 3D design.</p>
+</a></p>
+      </article><!--end .rp-small-two -->
+
+       <article class="rp-small-two">
+		<p class="summary"><a href="http://www.creativeapplications.net/jobs-featured/ux-interaction-designer-mw-at-milla-partner-gmbh/" title="Permalink to UX / Interaction Designer (m/w) at Milla &#038; Partner GmbH"><span class="entry-title">UX / Interaction Designer (m/w) at Milla &#038; Partner GmbH</span> <p>Milla &#038; Partner ist eine Agentur für Kommunikation im Raum. Kernkompetenz ist die Kreation und Umsetzung von Markenwelten, Ausstellungen, Messeauftritten und Events.</p>
+</a></p>
+      </article><!--end .rp-small-two -->
+
+       <article class="rp-small-two">
+		<p class="summary"><a href="http://www.creativeapplications.net/jobs-featured/engineer-rendering-at-lost-my-name/" title="Permalink to Engineer, Rendering at Lost My Name"><span class="entry-title">Engineer, Rendering at Lost My Name</span> <p>Come and help us make the most technologically advanced children’s books in the world.</p>
+</a></p>
+      </article><!--end .rp-small-two -->
+
+   
+
+	   </aside><aside id="text-18" class="widget widget_text"><h3 class="widget-title">Social</h3>			<div class="textwidget"><div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "../../../connect.facebook.net/en_GB/all.js#xfbml=1&appId=211416445579904";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- FLOATER START -->
+<div id="floater">
+
+<!-- Social -->
+<div id="twitter">
+
+<ul><a href="https://twitter.com/creativeapps" class="twitter-follow-button" data-show-count="true">Follow @creativeapps</a></ul>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><br></br>
+
+<div class="facebooknew">
+<div class="fb-like" data-href="https://www.facebook.com/creativeapps" data-send="false" data-width="290" data-show-faces="true" data-font="lucida grande"></div><br></br>
+</div>
+
+</div>	</div>
+		</aside><aside id="text-28" class="widget widget_text"><h3 class="widget-title">Newsletter</h3>			<div class="textwidget"><div id="subscribecan">
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="http://creativeapplications.us2.list-manage.com/subscribe/post?u=0a0f5dd1e8f539f75f3fd81e0&amp;id=e09418f288" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	
+<div class="mc-field-group">
+	<label for="mce-EMAIL"></label>
+	<input type="email" placeholder="Your Email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_0a0f5dd1e8f539f75f3fd81e0_e09418f288" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+
+<!--End mc_embed_signup-->
+</div></div>
+		</aside><aside id="text-37" class="widget widget_text">			<div class="textwidget"><a href="http://ca-n.in/can_insta"><img src="../../wp-content/uploads/2017/02/insta.jpg"></div>
+		</aside>            
+			<aside id="alobaidirandombannerswidget-3" class="widget widget_alobaidirandombannerswidget">
+			<h3 class="widget-title">Shop</h3>
+			<a rel="nofollow" target="_blank" href="http://ca-n.in/shop_h2"><img src="../../wp-content/uploads/2017/02/H2_Banner_sidebar_ENC_600x500.gif"></a>            
+            </aside>
+        
+	<!-- AD -->
+
+	
+		<aside id="zuki_recentposts_small_two-3" class="widget widget_zuki_recentposts_small_two">
+
+			<div class="widget-title-wrap">
+				<h3 class="widget-title">Advertisment</h3>
+			</div>
+
+			<article class="rp-small-two">
+			<div class="boooo">
+				<script async src="../../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+				<!-- CAN Sidebar Bottom Right -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-5819942721922249"
+				     data-ad-slot="4753690406"
+				     data-ad-format="auto"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			</article>
+
+		</aside>
+
+	
+
+</div><!-- end #blog-sidebar -->
+
+
+
+<div id="footerwidgets-wrap" class="cf">
+			<div id="footer-one" class="default-sidebar widget-area" role="complementary">
+			<aside id="text-8" class="widget widget_text"><h3 class="widget-title">About</h3>			<div class="textwidget">© 2016 CreativeApplications.Net<br> 
+					Licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons License</a>.</div>
+		</aside>		</div><!-- end #footer-one -->
+	
+			<div id="footer-two" class="default-sidebar widget-area" role="complementary">
+			<aside id="text-9" class="widget widget_text"><h3 class="widget-title">Sections</h3>			<div class="textwidget"><a href="http://www.creativeapplications.net/blog/">Blog</a><br>
+<a href="http://holo-magazine.com/">Magazine</a><br>
+<a href="http://www.creativeapplications.net/events/">Events</a><br>
+<a href="http://www.creativeapplications.net/shop/">Shop</a><br>
+<a href="http://www.creativeapplications.net/job-board/">Jobs</a><br>
+<a href="http://apps.creativeapplications.net/">Apps</a></div>
+		</aside>		</div><!-- end #footer-two -->
+	
+			<div id="footer-three" class="default-sidebar widget-area" role="complementary">
+			<aside id="text-10" class="widget widget_text"><h3 class="widget-title">Quick Links</h3>			<div class="textwidget"><a href="http://www.creativeapplications.net/about/">About</a><br>
+<a href="http://www.creativeapplications.net/advertise/">Advertise</a><br>
+<a href="http://www.creativeapplications.net/contact/">Contact</a><br>
+<a href="http://www.creativeapplications.net/submit-project/">Submit Project</a><br>
+<a href="http://www.creativeapplications.net/register/">Membership</a><br>
+<a href="http://www.creativeapplications.net/tools/">Tools</a><br></div>
+		</aside>		</div><!-- end #footer-three -->
+	
+			<div id="footer-four" class="default-sidebar widget-area" role="complementary">
+			<aside id="text-11" class="widget widget_text"><h3 class="widget-title">Follow</h3>			<div class="textwidget"><a href="http://twitter.com/creativeapps" title="Twitter">Twitter </a><br>
+<a href="https://www.instagram.com/creativeappsnet/" title="@creativeappsnet">Instagram </a><br>
+<a href="https://www.facebook.com/creativeapps" title="Facebook">Facebook</a><br>
+<a href="http://vimeo.com/groups/creativeapps" title="Vimeo">Vimeo</a><br>
+<a href="http://www.kickstarter.com/pages/creativeapps" title="Kickstarter">Kickstarter</a><br>
+<a href="https://github.com/CreativeApplicationsNet" title="GitHub">GitHub</a><br>
+<a href="http://www.creativeapplications.net/feed/" title="RSS">RSS Feed</a><br></div>
+		</aside>		</div><!-- end #footer-four -->
+	
+			<div id="footer-five" class="default-sidebar widget-area" role="complementary">
+			<aside id="text-12" class="widget widget_text"><h3 class="widget-title">Thank you</h3>			<div class="textwidget"><a href="http://www.rackspace.com/cloud/?id=130" title="Rackspace Cloud Hosting"><img src="../../images/rackspacex.png"></a><br>
+<a href="https://www.gosquared.com/r/MTQwODg" title="Live Stats"><img src="../../images/gosquared.png"></a>	</div>
+		</aside>		</div><!-- end #footer-five -->
+	</div><!-- end #footerwidgets-wrap -->
+</div><!-- end #main-wrap -->
+
+</div><!-- end #container -->
+
+
+
+<div id="pum-60496" class="pum pum-overlay pum-theme-55256 popmake-overlay pum-overlay-disabled 1" data-popmake="{&quot;id&quot;:60496,&quot;slug&quot;:&quot;holo-2-bottom-right&quot;,&quot;theme_id&quot;:55256,&quot;cookies&quot;:[{&quot;event&quot;:&quot;on_popup_close&quot;,&quot;settings&quot;:{&quot;name&quot;:&quot;pum-60496&quot;,&quot;key&quot;:&quot;&quot;,&quot;time&quot;:&quot;1 day&quot;,&quot;path&quot;:1}}],&quot;triggers&quot;:[{&quot;type&quot;:&quot;auto_open&quot;,&quot;settings&quot;:{&quot;delay&quot;:&quot;5000&quot;,&quot;cookie&quot;:{&quot;name&quot;:[&quot;pum-60496&quot;]}}},{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;mobile_disabled&quot;:true,&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;custom&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;450&quot;,&quot;custom_height&quot;:&quot;150&quot;,&quot;overlay_disabled&quot;:&quot;1&quot;,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;1000&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;position_fixed&quot;:&quot;1&quot;,&quot;position_bottom&quot;:&quot;30&quot;,&quot;location&quot;:&quot;left bottom&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;30&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-60496" class="pum-container popmake theme-55256 size-custom pum-position-fixed">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content">
+			<p><a href="http://ca-n.in/2lfuoGZ"><img class="alignnone wp-image-60494" src="../../wp-content/uploads/2016/12/H2_popup-banner_4_450x150.jpg" width="450" height="150" /></a></p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			x            </button>
+		
+	</div>
+
+</div>
+        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'creativeapps';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1 && nodes[i].parentNode.tagName == 'A') {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        
+	<script>
+		jQuery(document).ready(function() {
+
+			// Get all thumbs containers
+			jQuery( ".thumbs-rating-container" ).each(function( index ) {
+
+			 	// Get data attribute
+			 	 var content_id = jQuery(this).data('content-id');
+
+			 	 var itemName = "thumbsrating"+content_id;
+
+			 	      // Check if this content has localstorage
+			 	 	if (localStorage.getItem(itemName)){
+
+						// Check if it's Up or Down vote
+						if ( localStorage.getItem("thumbsrating" + content_id + "-1") ){
+							jQuery(this).find('.thumbs-rating-up').addClass('thumbs-rating-voted');
+						}
+						if ( localStorage.getItem("thumbsrating" + content_id + "-0") ){
+							jQuery(this).find('.thumbs-rating-down').addClass('thumbs-rating-voted');
+						}
+					}
+			});
+		});
+	</script>
+
+	<script type='text/javascript' src='../../wp-content/plugins/contact-form-7/includes/js/jquery.form.mind03d.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/contact-form-7/includes/js/scripts1c9b.js?ver=4.6.1'></script>
+<script type='text/javascript' src='../../../s0.wp.com/wp-content/js/devicepx-jetpack8253.js?ver=201709'></script>
+<script type='text/javascript' src='../../wp-content/plugins/popup-maker/assets/js/mobile-detect.min3ba1.js?ver=1.3.3'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/ui/core.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/ui/position.mine899.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pum_vars = {"ajaxurl":"http:\/\/www.creativeapplications.net\/wp-admin\/admin-ajax.php","default_theme":"55232"};
+var ajaxurl = "index.html\/\/www.creativeapplications.net\/wp-admin\/admin-ajax.php";
+var popmake_default_theme = "55232";
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/popup-maker/assets/js/site.mine203.js?defer&amp;ver=1.4.21' defer='defer'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.minc027.js?ver=277816072bc6151191a7895feef57117'></script>
+
+<script>
+  !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+  arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+  d.src='../../../d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+  insertBefore(d,q)}(window,document,'script','_gs');
+
+  _gs('GSN-612285-Q');
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-5844782-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+<!-- Mirrored from www.creativeapplications.net/processing/random-access-memory-materialising-mathematical-process-algorithm/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Mar 2017 16:47:49 GMT -->
+</html>
+
+<!-- Dynamic page generated in 1.348 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2017-03-01 16:30:52 -->
+
+<!-- Compression = gzip -->

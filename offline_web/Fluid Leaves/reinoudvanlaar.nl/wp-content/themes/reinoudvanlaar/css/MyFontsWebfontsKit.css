@@ -1,0 +1,76 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3123851, 2015-11-11T12:34:01-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: AlbertusMTPro by Monotype 
+ * URL: http://www.myfonts.com/fonts/mti/albertus/pro-roman/
+ * Copyright: Font software (c) 1992 Adobe Systems Incorporated. Typeface designs (c) 1992 The Monotype Corporation. All rights reserved.
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: ProximaNovaA-Light by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-light/
+ * Copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * Licensed pageviews: 1,000,000
+ * 
+ * Webfont: ProximaNovaA-Medium by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/a-medium/
+ * Copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * Licensed pageviews: 1,000,000
+ * 
+ * Webfont: ProximaNovaS-Light by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-light/
+ * Copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * Licensed pageviews: 1,000,000
+ * 
+ * Webfont: ProximaNovaS-Medium by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/s-medium/
+ * Copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * Licensed pageviews: 1,000,000
+ * 
+ * Webfont: ProximaNova-Light by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/light/
+ * Copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * Licensed pageviews: 1,000,000
+ * 
+ * Webfont: ProximaNova-Medium by Mark Simonson
+ * URL: http://www.myfonts.com/fonts/marksimonson/proxima-nova/medium/
+ * Copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ * Licensed pageviews: 1,000,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3123851
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("http://hello.myfonts.net/count/2faa8b");
+
+  
+@font-face {font-family: 'AlbertusMTPro';src: url('webfonts/2FAA8B_0_0.eot');src: url('webfonts/2FAA8B_0_0d41d.eot?#iefix') format('embedded-opentype'),url('webfonts/2FAA8B_0_0.woff2') format('woff2'),url('webfonts/2FAA8B_0_0.woff') format('woff'),url('webfonts/2FAA8B_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaA-Light';src: url('webfonts/2FAA8B_1_0.eot');src: url('webfonts/2FAA8B_1_0d41d.eot?#iefix') format('embedded-opentype'),url('webfonts/2FAA8B_1_0.woff2') format('woff2'),url('webfonts/2FAA8B_1_0.woff') format('woff'),url('webfonts/2FAA8B_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaA-Medium';src: url('webfonts/2FAA8B_2_0.eot');src: url('webfonts/2FAA8B_2_0d41d.eot?#iefix') format('embedded-opentype'),url('webfonts/2FAA8B_2_0.woff2') format('woff2'),url('webfonts/2FAA8B_2_0.woff') format('woff'),url('webfonts/2FAA8B_2_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-Light';src: url('webfonts/2FAA8B_3_0.eot');src: url('webfonts/2FAA8B_3_0d41d.eot?#iefix') format('embedded-opentype'),url('webfonts/2FAA8B_3_0.woff2') format('woff2'),url('webfonts/2FAA8B_3_0.woff') format('woff'),url('webfonts/2FAA8B_3_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNovaS-Medium';src: url('webfonts/2FAA8B_4_0.eot');src: url('webfonts/2FAA8B_4_0d41d.eot?#iefix') format('embedded-opentype'),url('webfonts/2FAA8B_4_0.woff2') format('woff2'),url('webfonts/2FAA8B_4_0.woff') format('woff'),url('webfonts/2FAA8B_4_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNova-Light';src: url('webfonts/2FAA8B_5_0.eot');src: url('webfonts/2FAA8B_5_0d41d.eot?#iefix') format('embedded-opentype'),url('webfonts/2FAA8B_5_0.woff2') format('woff2'),url('webfonts/2FAA8B_5_0.woff') format('woff'),url('webfonts/2FAA8B_5_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'ProximaNova-Medium';src: url('webfonts/2FAA8B_6_0.eot');src: url('webfonts/2FAA8B_6_0d41d.eot?#iefix') format('embedded-opentype'),url('webfonts/2FAA8B_6_0.woff2') format('woff2'),url('webfonts/2FAA8B_6_0.woff') format('woff'),url('webfonts/2FAA8B_6_0.ttf') format('truetype');}
+ 

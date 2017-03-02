@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+reinoudvanlaar.nl	TRUE	/	FALSE	1999999999	PHPSESSID	f73hm9rh1d8qu9vi1fndd8aqq0
+www.creativeapplications.net	TRUE	/	FALSE	1999999999	X-Mapping-hepadkon	3DDF4BFE2A6E1041650574D2681CF055
+www.creativeapplications.net	TRUE	/	FALSE	1999999999	swpm_session	d50f99883ddad623d8ff2ddc6910add8
+www.creativeapplications.net	TRUE	/	FALSE	1999999999	wfvt_3743083960	58b6fa97867f5
+
