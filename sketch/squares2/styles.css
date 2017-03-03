@@ -1,0 +1,13 @@
+hasp-fps:unresolved {
+    content: '???';
+}
+
+hasp-fps {
+    font-family: monospace;
+    color: #efefef;
+    background: #222;
+}
+
+hasp-fps > span {
+    margin-left: 1em;
+}
