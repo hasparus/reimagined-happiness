@@ -1,5 +1,7 @@
 /*jshint esversion: 6 */
 var p;
+var t = 0;
+var tstep = 0.002;
 
 var Canvas = {
   init() {
@@ -13,10 +15,14 @@ var Canvas = {
     slider = createSlider(0, TWO_PI, PI / 4, 0.01);
     player = new Platform();
 
+    textFont('Arial');
+    textSize(72);
+
   },
   draw() {
-    background(25, 95, 141);
-
+    //background(25, 95, 141);
+    background(45 * noise(t) + 10, 115 * noise(2 * t) + 10, 171 * noise(t, GameManager.score / 1000) + 10);
+    t += tstep;
     var gravity = createVector(0, 0.0005);
     ps.applyForce(gravity);
 
@@ -24,6 +30,9 @@ var Canvas = {
     for (let particle of ps.particles) {
       player.hitIfCollides(particle);
     }
+    GameManager.showScore();
+    GameManager.checkIfParticlesTouchBottom(ps);
+    Texter.compliment();
     ps.run();
   }
 };
@@ -31,11 +40,45 @@ var Canvas = {
 //~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~->
 
 Texter = {
-  texts: ['m8, rly?', 'Try harder.', "Disgraceful.", '"AMAZING. NO JOKES."',
+  //wypisywanie tekstu w p5 trochę ssie, nie znalazłem gotowej opcji żeby go automatycznie wyśrodkowywać.
+  activeCompliment: '',
+  texts: ['m8, rly?', 'Try harder.', "Disgraceful.", '"Amazing. No jokes at all."',
   "Keep your anger to yourself.", "It's okay. Almost.", "You're not losing that much.",
   "Well, at least you're pretty."],
+  pickCompliment() {
+    this.activeCompliment = this.texts[Math.floor(this.texts.length * Math.random())];
+  },
+  compliment() {
+    push();
+    fill(255);
+    textSize(54);
+    text(this.activeCompliment, 350, 1/3 * height);
+    pop();
+  }
+};
 
-}
+GameManager = {
+  score: 0,
+  showScore() {
+    push();
+    fill(255);
+    text(this.score.toString(), width / 2 - 40, 1/5 * height);
+    pop();
+  },
+  particleFellOut() {
+    this.score -= 1;//Math.floor(Math.random() * 69);
+    if (Math.abs(this.score) % 20 === 3)
+      Texter.pickCompliment();
+  },
+  checkIfParticlesTouchBottom(psystem) {
+    for (let particle of psystem.particles) {
+      if (particle.position.y > height) {
+        this.particleFellOut();
+        particle.kill();
+      }
+    }
+  }
+};
 
 class Platform {
   constructor() {
@@ -112,6 +155,10 @@ var Particle = function (position) {
   this.angularVelocity = 0;
   this.angularAcceleration = 0;
 };
+
+Particle.prototype.kill = function () {
+  this.lifespan = 0;
+}
 
 Particle.prototype.run = function () {
   this.update();
