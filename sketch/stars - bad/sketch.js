@@ -10,11 +10,10 @@ var Canvas = {
       .appendChild(document.querySelector('canvas'));
 
     ps = new ParticleSystem(createVector(width / 2, -20));
-    for (let i = 0; i < 9; ++i) ps.addParticle();
+    for (let i = 0; i < 12; ++i) ps.addParticle();
     repeller = new Repeller(width / 2, height / 2);
 
     slider = createSlider(0, TWO_PI, PI / 4, 0.01);
-    sizeSlider = createSlider(0, 100, 8, 0.01);
 
   },
   draw() {
@@ -127,7 +126,7 @@ Particle.prototype.update = function () {
 // Method to display
 Particle.prototype.display = function () {
   angle = slider.value();
-  push();
+  //push();
   stroke(255, this.lifespan);
   fill(255, this.lifespan / 2);
   translate(this.position.x, this.position.y);
@@ -135,10 +134,10 @@ Particle.prototype.display = function () {
   for (let deg = 0; deg <= TWO_PI; deg += step) {
     rotate(step);
     push();
-    this.branch(sizeSlider.value());
+    this.branch(8);
     pop();
   }
-  pop();
+  //pop();
   /*
   stroke(255, this.lifespan);
   strokeWeight(2);
@@ -165,7 +164,7 @@ Particle.prototype.isDead = function () {
 Particle.prototype.branch = function (len) {
   line(0, 0, 0, len);
   translate(0, len);
-  if (len > max(2, sizeSlider.value() / 7)) {
+  if (len > 2) {
     push();
     rotate(angle);
     this.branch(len * 0.67);
