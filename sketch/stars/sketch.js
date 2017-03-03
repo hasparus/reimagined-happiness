@@ -1,5 +1,7 @@
 /*jshint esversion: 6 */
 var p;
+var swag = 0;
+var swagstep = 0.005;
 
 var Canvas = {
   init() {
@@ -8,21 +10,19 @@ var Canvas = {
       .appendChild(document.querySelector('canvas'));
 
     ps = new ParticleSystem(createVector(width / 2, -20));
-    for (let i = 0; i < 30; ++i) ps.addParticle();
+    for (let i = 0; i < 9; ++i) ps.addParticle();
     repeller = new Repeller(width / 2, height / 2);
-
 
     slider = createSlider(0, TWO_PI, PI / 4, 0.01);
 
   },
   draw() {
-    background(25, 95, 141);
+    background('#007CBE');
 
     var gravity = createVector(0, 0.0005);
     ps.applyForce(gravity);
 
     // ps.applyRepeller(repeller);
-
     // repeller.display();
     ps.run();
   }
@@ -59,7 +59,7 @@ var ParticleSystem = function (position) {
 
 ParticleSystem.prototype.addParticle = function (particle = new Particle(this.origin)) {
   this.origin = createVector(width * Math.random() - 20);
-  this.particles.push(particle = new Particle(createVector(width * Math.random() - 20), 0));
+  this.particles.push(particle = new Particle(createVector(width * Math.random() - 20, -20)));
 };
 
 ParticleSystem.prototype.run = function () {
@@ -125,7 +125,8 @@ Particle.prototype.update = function () {
 
 // Method to display
 Particle.prototype.display = function () {
-  /*angle = slider.value();
+  angle = slider.value();
+  push();
   stroke(255, this.lifespan);
   fill(255, this.lifespan / 2);
   translate(this.position.x, this.position.y);
@@ -135,7 +136,9 @@ Particle.prototype.display = function () {
     push();
     this.branch(8);
     pop();
-  }*/
+  }
+  pop();
+  /*
   stroke(255, this.lifespan);
   strokeWeight(2);
   fill(240, this.lifespan / 4 - 60);
@@ -150,7 +153,8 @@ Particle.prototype.display = function () {
   rect(-size.width / 2, -size.height / 2, size.width, size.height);
   pop();
 
-};
+}; */
+}
 
 // Is the article still useful?
 Particle.prototype.isDead = function () {
@@ -255,5 +259,4 @@ Snowflake.prototype.branch = function (len) {
   }
 };
 
-Snowflake.prototype = Object.create(Particle.prototype);
-*/
+Snowflake.prototype = Object.create(Particle.prototype);*/
